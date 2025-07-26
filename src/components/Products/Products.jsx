@@ -60,20 +60,18 @@ export default function Products() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredProducts.map((product) => (
-            <>
+            <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden flex flex-col group">
               <Link
                 to={`/productdetails/${product.id}`}
-                key={product.id}
-                className="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden group flex flex-col"
+                className="w-full h-48 bg-white flex items-center justify-center p-4 overflow-hidden"
               >
-                <div className="w-full h-48 bg-white flex items-center justify-center p-4 overflow-hidden">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="max-h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="max-h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                />
               </Link>
+
               <div className="p-4 flex flex-col flex-grow dark:bg-gray-800">
                 <h4 className="text-xs font-semibold text-indigo-500 dark:text-indigo-400 uppercase tracking-wider mb-1">
                   {product.category}
@@ -81,18 +79,19 @@ export default function Products() {
                 <h3 className="text-sm font-bold text-gray-800 dark:text-gray-200 flex-grow mb-2">
                   {product.title.split(" ").slice(0, 8).join(" ")}
                 </h3>
-                <p className="text-lg font-extrabold text-gray-900 dark:text-white mt-auto">
+                <p className="text-lg font-extrabold text-gray-900 dark:text-white">
                   ${product.price.toFixed(2)}
                 </p>
-                <button
-                  onClick={() => handleAddToWishlist(product)}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-indigo-600 text-white font-semibold text-lg rounded-xl hover:bg-indigo-700 transition-transform transform hover:scale-105 duration-300 text-center"
-                >
-                  <Heart size={20} />
-                  Add to WishList
-                </button>
               </div>
-            </>
+
+              <button
+                onClick={() => handleAddToWishlist(product)}
+                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-indigo-600 text-white font-semibold text-lg rounded-b-xl hover:bg-indigo-700 transition-transform transform hover:scale-105 duration-300 text-center"
+              >
+                <Heart size={20} />
+                Add to WishList
+              </button>
+            </div>
           ))}
         </div>
       )}
