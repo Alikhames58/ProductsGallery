@@ -6,6 +6,7 @@ import { productContext } from "../../context/ProductContext";
 import Products from "../Products/Products";
 import Category from "../Category/Category";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   const settings = {
@@ -35,12 +36,12 @@ export default function HomePage() {
                   <p className="text-gray-600 dark:text-gray-400 mb-6 hidden md:block">
                     {product.description.split(" ").slice(0, 15).join(" ")}...
                   </p>
-                  <a
+                  <Link
                     href={`productdetails/${product.id}`}
                     className="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105"
                   >
                     Shop Now
-                  </a>
+                  </Link>
                 </div>
                 <div className="md:w-1/2 flex justify-center items-center h-48 md:h-full">
                   <img
