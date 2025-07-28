@@ -3,7 +3,6 @@ import { useContext, useState } from "react";
 import { productContext } from "../../context/ProductContext";
 import { ThemeContext } from "../../context/ThemeContext";
 import { Heart, Menu, X, Moon, Sun } from "lucide-react";
-import React from "react";
 
 export default function Navbar() {
   const { searchTerm, setSearchTerm, setSortOption, wishlist } =
