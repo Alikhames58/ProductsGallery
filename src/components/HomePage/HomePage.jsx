@@ -37,7 +37,7 @@ export default function HomePage() {
                     {product.description.split(" ").slice(0, 15).join(" ")}...
                   </p>
                   <Link
-                    href={`productdetails/${product.id}`}
+                    to={`productdetails/${product.id}`}
                     className="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-transform transform hover:scale-105"
                   >
                     Shop Now
