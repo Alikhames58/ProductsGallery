@@ -4,10 +4,6 @@ export default function Footer() {
   return (
     <footer className="bg-gray-800 dark:bg-gray-900 text-gray-300 py-10">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-<<<<<<< HEAD
-=======
-        {/* Left Section */}
->>>>>>> e8eb8932af52c9a807819633e274a60f64402996
         <div>
           <h3 className="text-xl font-bold text-white mb-3">MyShop</h3>
           <p className="text-sm text-gray-400">
@@ -15,10 +11,6 @@ export default function Footer() {
           </p>
         </div>
 
-<<<<<<< HEAD
-=======
-        {/* Links Section */}
->>>>>>> e8eb8932af52c9a807819633e274a60f64402996
         <div>
           <h4 className="font-semibold text-white mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm">
@@ -40,10 +32,6 @@ export default function Footer() {
           </ul>
         </div>
 
-<<<<<<< HEAD
-=======
-        {/* Right Social Icons */}
->>>>>>> e8eb8932af52c9a807819633e274a60f64402996
         <div>
           <h4 className="font-semibold text-white mb-3">Follow Us</h4>
           <div className="flex justify-center md:justify-start space-x-5 text-xl">
